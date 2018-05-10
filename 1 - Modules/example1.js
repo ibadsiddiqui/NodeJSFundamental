@@ -1,5 +1,4 @@
-import announce from "./announce";
+var announce = require('./announce');
 
-announce('Node Training And Fundamentls');
-
-announce('Practing done by Ibad Siddiqui')
+announce('Node Training and Fundamentals\n');
+announce('Practing by Ibad Siddiqui\n');
