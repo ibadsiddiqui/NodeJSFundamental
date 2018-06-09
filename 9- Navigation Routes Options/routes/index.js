@@ -1,27 +1,36 @@
+var express = require('express');
+var router = express.Router();
+var flight = require('../flights')
 
-/*
- * GET home page.
- */
 
-
-var flight = require('./flights');
-
+// flight objects
 var flight1 = flight({
   number: 1,
-  origin: "LAX",
-  destination: "DCA",
-  departs: "9AM",
-  arrives: "4PM",
+  origin: 'LAX',
+  destination: 'DCA',
+  departs: '9AM',
+  arrives: '4PM',
+  
 })
 
 var flight2 = flight({
   number: 2,
-  origin: "LAX",
-  destination: "PDX",
-  departs: "10AM",
-  arrives: "12PM",
+  origin: 'LAX',
+  destination: 'PDX',
+  departs: '10AM',
+  arrives: '2PM',
+  
 })
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
-};
+/* GET home page. */
+
+router.get('/flights1', function(req, res, next) {
+  res.json(flight1.getInformation());
+});
+
+router.get('/flights2', function(req, res, next) {
+  res.json(flight2.getInformation());
+});
+
+
+module.exports = router;
