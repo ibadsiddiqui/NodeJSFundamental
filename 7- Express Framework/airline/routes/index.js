@@ -23,8 +23,14 @@ var flight2 = flight({
 })
 
 /* GET home page. */
-router.get('/flights', function(req, res, next) {
+
+router.get('/flights1', function(req, res, next) {
   res.json(flight1.getInformation());
 });
+
+router.get('/flights2', function(req, res, next) {
+  res.json(flight2.getInformation());
+});
+
 
 module.exports = router;
