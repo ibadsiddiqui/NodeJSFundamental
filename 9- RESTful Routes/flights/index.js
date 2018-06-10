@@ -22,7 +22,7 @@ var Flight = function () {
     this.triggerDepart = function(){
         this.data.actualDepart = Date.now()
     }
-    this.triggerArrives = function(){
+    this.triggerArrive = function(){
         this.data.actualArrive = Date.now()
     }
     this.getInformation = function(){
