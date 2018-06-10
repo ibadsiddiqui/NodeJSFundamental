@@ -20,5 +20,17 @@ router.get('/flights/:number', function(req, res, next) {
   }
 
 });
+router.put('/flights/:number/arrived', function(req, res, next) {
+
+  var number = req.params('number');
+  
+  if(typeof flights[number] === "undefined"){
+    res.status(404).json({status: 'Error'});
+  } else{
+    // flights[number].triggerArrive();
+    // res.json({status: "done"})
+  }
+
+});
 
 module.exports = router;
