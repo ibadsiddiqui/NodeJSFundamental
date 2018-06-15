@@ -1,6 +1,6 @@
 var http = require('http'),
-    app = require('./app'),
-    flights = require('../data');
+    flights = require('./data'),
+    app = require('./app')(flights);
 
 
 http.createServer(app).listen(app.get('port'), ()=>{
