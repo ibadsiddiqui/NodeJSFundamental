@@ -3,7 +3,6 @@
  * GET home page.
  */
 
-var flights = require('../data');
 
 var flight = require('../flight');
 
